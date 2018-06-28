@@ -1,0 +1,45 @@
+<view class='main'>
+  <view class='title'>
+    <view class='iconBox'>
+      <image src='../../images/logo.png'></image>
+    </view>
+    <text>HAIR</text>
+    <text>STYLIST</text>
+    <text>作品上传</text>
+  </view>
+  <view class='addWork' bindtap='add'>添加作品</view>
+  <!-- <scroll-view scroll-y style="height:{{scrollHeight}}px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-top="{{scrollTop}}"> -->
+
+
+    <view class='works'>
+      <view class='work' wx:if="{{list.length!=0}}">
+        <view class='top'>TOP</view>
+      </view>
+      <view class='work' wx:for="{{list}}" bindlongtap='edit' data-id='{{item.id}}' data-index='{{index}}'>
+        <view class='orderNum'>{{index<9? '0'+(index+1):(index+1)}}</view>
+            <view class='pic'>
+              <image src='{{item.pics[0]}}' data-src="{{item.pics}}" bindtap="previewImage"></image>
+              <view class='coul'>UTIFCHIRS</view>
+            </view>
+            <view class='words'>
+              <view>发质:
+                <text>{{item.hairQuality}}</text>
+              </view>
+              <view>发量:
+                <text>{{item.hairNumber}}</text>
+              </view>
+              <view>脸型:
+                <text>{{item.faceType}}</text>
+              </view>
+            </view>
+        </view>
+         </view>
+        <view class='loading' wx:if="{{loading}}">
+          <view class='load'>
+            <image src='../../images/loading.gif'></image>
+          </view>
+          <view>正在加载...</view>
+        </view>
+        <view class='noSth'></view>
+  <!-- </scroll-view> -->
+  </view>

@@ -1,0 +1,43 @@
+<view class="tabBox">
+  <view  wx:for="{{tab}}" class='{{showIndex==index?"tab active":"tab"}}' bindtap='tabToggle' data-index="{{index}}">{{item}}</view>
+</view>
+<view class='Box1' wx:if="{{showIndex==0}}">
+  <view class='title'>上传下次剪发参考发型</view>
+<view class='tip'>您可以参考下图拍摄，只能上传3张哦~</view>
+<view class='main'>
+  <view class='imgBox' data-index="1" bindtap='show'>
+      <image src='{{img0?img0:"../../images/hair.png"}}'></image>
+      <view class='upload'>
+        <image src='../../images/camera.png'></image>
+      </view>
+  </view>
+   <view class='imgBox' data-index="2"  bindtap='show'>
+      <image src='{{img1?img1:"../../images/hair.png"}}'></image>
+      <view class='upload' >
+        <image src='../../images/camera.png'></image>
+      </view>
+  </view>
+   <view class='imgBox' data-index="3"  bindtap='show'>
+      <image src='{{img2?img2:"../../images/hair.png"}}'></image>
+      <view class='upload'>
+        <image src='../../images/camera.png'></image>
+      </view>
+  </view>
+</view>
+</view>
+<view class='Box1' wx:if="{{showIndex==1}}">
+    <view class='main'>
+        <view class='imgBox' wx:for="{{list}}">
+          <image src='{{item.image}}'></image>
+        </view>
+    </view>
+</view>
+<view class='mask' wx:if="{{mask}}">
+    <image src='{{img11?img11:"../../images/hair.png"}}' mode='widthFix'></image>
+    <view class='upLoadBox' wx:if="{{btnGroup}}">
+      <view  bindtap='changeImg'>选择</view>
+      <view  bindtap='upload'>上传</view>
+       <view bindtap='hide1'>取消</view> 
+    </view>
+     <view bindtap='hide1' class='hideBtn' wx:else>取消</view> 
+</view>

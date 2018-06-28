@@ -1,0 +1,126 @@
+/* pages/me.wxss */
+page{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.header{
+  width: 100%;
+  height: 32%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.tx{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  overflow:hidden;
+}
+.tx image{
+  width: 100%;
+  height: 100%;
+}
+.wel{
+  font-size: 40rpx;
+  color: #000;
+  margin: 10rpx 0;
+}
+.address{
+  color: #424242;
+  font-size: 24rpx;
+}
+.tabBox{
+  width: 100%;
+  height: 50%;
+  padding:40rpx;
+box-sizing:border-box;
+
+}
+.tabBox>view{
+  width: 50%;
+  height: 50%;
+  float: left;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size:30rpx;
+}
+.checkOrder{
+  border-right: 2rpx solid #E6E6E6;
+  border-bottom: 2rpx solid #E6E6E6;
+}
+.work{
+  border-bottom: 2rpx solid #E6E6E6;
+}
+.project{
+  border-right: 2rpx solid #E6E6E6;
+}
+.checkOrder image{
+  width: 60rpx;
+  height: 70rpx;
+  margin-bottom: 20rpx;
+}
+.work image,.project image,.eva image{
+width: 60rpx;
+height: 60rpx;
+ margin-bottom: 20rpx;
+
+}
+.adBox{
+  width: 100%;
+  height: 18%;
+  position: absolute;
+   padding: 20rpx 50rpx;
+   box-sizing: border-box;
+   bottom: 0;
+   overflow: hidden;
+}
+.adImg{
+  width: 220rpx;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+ 
+}
+.adImg image{
+  width: 100%;
+  height: 100%;
+}
+.adTitle{
+  font-size: 34rpx;
+  color: #8B3B42;
+  margin:20rpx 0 10rpx;
+}
+.adTitle text{
+  font-size: 36rpx;
+}
+.adZi{
+  font-size: 28rpx;
+  color: #737373;
+}
+.call{
+  width: 120rpx;
+  height: 100rpx;
+  position: absolute;
+  right:50rpx;
+  top:50rpx;
+  text-align: center;
+  font-size: 26rpx;
+  line-height: 20rpx;
+}
+.call image{
+  display: inline-block;
+  width: 60rpx;
+  height: 60rpx;
+}
+.getInfo{
+  padding:10rpx 20rpx;
+line-height:1.5;
+font-size:28rpx;
+}

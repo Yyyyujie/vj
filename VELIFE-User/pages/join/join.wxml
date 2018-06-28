@@ -1,0 +1,27 @@
+<view class='banner'>
+  <image src='../../images/banner.jpg'></image>
+  <view class='bannerZi'>
+    <image src='../../images/bannerZi.png'></image>
+  </view>
+  <view class='bot'>
+    <image src='../../images/bot.png'></image>
+  </view>
+</view>
+<view class='main'>
+  <view class='person'>
+      <view class='person1'>
+        <view></view>
+        <view></view>
+        <view></view>
+      </view>
+      <view class='eng'>PERSONMESSAGE</view>
+      <view class='zh-cn'>个人信息</view>
+  </view>
+  <view class='formBox'>
+    <view>CARD NUMBER</view>
+    <input placeholder='请输入您的电话'  placeholder-class='inp' bindinput='phone'></input>
+    <view>NAME</view>
+    <input placeholder='姓名' placeholder-class='inp' bindinput='name'></input>
+    <button bindtap='join'>提交</button>
+  </view>
+</view>

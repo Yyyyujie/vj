@@ -1,0 +1,243 @@
+<view class='{{mask?"all noscroll":"all"}}'>
+  <view class='banner'>
+    <image src='../../images/banner.jpg' mode='widthFix'></image>
+    <view class='bannerZi'>
+      <image src='../../images/banner2.png' style='width:60%;' mode='widthFix'></image>
+      <view bindtap='checkMap'>
+        <view class='addIcon'>
+          <image src='../../images/address.png'></image>
+        </view>{{info.shopInfo.address}}</view>
+    </view>
+    <view class='bot'>
+      <image src='../../images/bot.png'></image>
+    </view>
+  </view>
+  <view class='main'>
+    <view class='title'>
+      <view class='iconBox'>
+        <image src='../../images/logo.png'></image>
+      </view>
+      <text>HAIR</text>
+      <text>STYLIST</text>
+      <text>发型师</text>
+    </view>
+    <view class='hairdresser'>
+
+      <view class='hairLi' wx:for="{{info.barberList}}" wx:key="key" wx:if="{{index<=showIndex}}">
+        <view class='hairLiModel'>
+          <view class='hairLeft' data-id="{{item.id}}" bindtap='menShow'>
+            <image src='{{item.headImage}}'></image>
+          </view>
+          <view class='hairRight'>
+            <view class='money'>¥{{item.priceRule.price?item.priceRule.price:0}}</view>
+            <view>
+              <text class='name'>{{item.name}}</text>
+            </view>
+            <view class='zhi'>
+              <view class='icon'>
+                <image src='../../images/prize.png'></image>
+              </view>
+              <text>{{item.titleEntity.name}}</text>
+            </view>
+            <view>
+              <view class='vBox'>
+                <view class='vLi' wx:for="{{item.waitPersons}}">
+                  <image src='../../images/vLi.png'></image>
+                </view>
+              </view>
+              <view class='wait'>
+                <text>前面有<text>{{item.waitPersons}}</text>人等待</text>
+                <text>等待时间大约<text>{{item.waitHours}}分钟</text></text>
+              </view>
+            </view>
+            <form bindsubmit="formSubmit" report-submit="true" class='form'>
+              <button class='number' formType="submit" data-id="{{item.id}}" data-name="{{item.name}}" data-hours="{{item.waitHours}}" data-person="{{item.waitPersons}}"  data-headImg="{{item.headImage}}"wx:if="{{item.workStatus!=2}}">一键取号</button>
+              <button class='number nogo' wx:if="{{item.workStatus==2}}">下班了</button>
+              <!-- <button class='number'  open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" wx:if="{{!userInfo.nickName}}">一键取号</button> -->
+            </form>
+            <!-- <form bindsubmit="form" report-submit="true" style='display:none'>
+              <button class='number' formType="submit" bindtap='click'></button>
+            </form> -->
+          </view>
+
+
+        </view>
+
+      </view>
+    </view>
+
+
+    <view class='title' style='position:relative;'>
+      <view class='iconBox'>
+        <image src='../../images/logo.png'></image>
+      </view>
+      <text>HAIR</text>
+      <text>STYLIST</text>
+      <text>领取优惠券</text>
+      <view class='get' bindtap='showMask'>领取</view>
+    </view>
+
+  </view>
+  <view class='evaBox'>
+    <view class='title' style='position:relative;'>
+      <view class='iconBox'>
+        <image src='../../images/logo.png'></image>
+      </view>
+      <text>HAIR</text>
+      <text>STYLIST</text>
+      <text>顾客评价</text>
+    </view>
+    <view class='evaTab'>
+        <view class='tab1'>
+          <view class='evaTop'>{{info.statisticsInfo[0].averageScore}}</view>
+          <view class='evaScoreLi'>
+              <view wx:for="{{5}}" wx:for-index="sIndex">
+                
+                <image src='../../images/scroeOn.png' wx:if="{{sIndex+1<info.statisticsInfo[0].averageScore}}"></image><image src='../../images/scroe.png' wx:else></image>
+              </view>
+          </view>
+        </view>
+
+        <view class='tab1'>
+          <view class='evaTop'>{{info.statisticsInfo[0].total?info.statisticsInfo[0].total:'0'}}</view>
+          <view class='evaScoreLi'>
+              评论数
+          </view>
+        </view>
+
+        <view class='tab1'>
+          <view class='evaTop'>{{info.statisticsInfo[0].preTotal?info.statisticsInfo[0].preTotal:'0'}}%</view>
+          <view class='evaScoreLi'>
+              上月好评率
+          </view>
+        </view>
+
+    </view>
+    <view class='evaList'>
+      <view class='evaLi' wx:for="{{info.commentItems}}" wx:key="key">
+        <view class='evaLeft'>
+          <image src='{{item.memberPic?item.memberPic:"../../images/logo.png"}}'></image>
+        </view>
+        <view class='evaRight'>
+          <view class='first'>
+            <text class='name'>{{item.shortName}}</text>(
+            <text>{{item.shortPhone}}</text>)</view>
+          <view class='con'>
+            {{item.conten}}
+          </view>
+          <view class='bottom'>
+            <view>发型师:
+              <text>{{item.barber.name}}</text>
+            </view>
+            <text class='pullRight'>{{item.publicData}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='hairMore' bindtap='evaMore'>查看更多</view>
+  </view>
+  <view class='storeAd'>
+    <view class='title' style='position:relative;'>
+      <view class='iconBox'>
+        <image src='../../images/logo.png'></image>
+      </view>
+      <text>HAIR</text>
+      <text>STYLIST</text>
+      <text>门店信息</text>
+    </view>
+    <view class='address'>
+      <view class='adIcon'>
+        <image src='../../images/adr.png'></image>
+      </view>
+      <view>{{info.shopInfo.address}}</view>
+
+    </view>
+
+    <view class='serverTitle'>服务标准</view>
+    <view class='serverBox'>
+      <view class='serverLi' wx:for="{{info.serviceItems}}" wx:key="key">
+        <view class='seIcon'>
+          <image src='{{item.imgUrl}}'></image>
+        </view>{{item.name}}
+      </view>
+    </view>
+    <view class='call'>客服电话：
+      <text>400-6555200</text>
+    </view>
+    <view class='time'>客服时间:
+      <text>09:00-21:00 周一至周五</text>
+    </view>
+  </view>
+</view>
+
+<view class='mask' wx:if="{{mask}}">
+
+  <view class='cardBox'>
+    <view class='closeBtn'>
+      <icon type='cancel' class='cancel' color='rgba(255,255,255,0.7)' bindtap='hide'></icon>
+    </view>
+    <view class='title' style='position:relative;'>
+      <view class='iconBox'>
+        <image src='../../images/logo.png'></image>
+      </view>
+      <text>HAIR</text>
+      <text>STYLIST</text>
+      <text>优惠券领取</text>
+    </view>
+    <view class='cardLis'>
+      <view class='noQuan' wx:if="{{quanList.length==0}}">暂无优惠券...</view>
+      <view class='card' wx:for="{{quanList}}" data-id='{{item.id}}' bindtap='lingqu'>
+        <image src='../../images/blueCard.png'></image>
+        <view class='cardContent'>
+          <view class='cardLeft'>
+            <view class='cardTitle'>
+              <image src='../../images/card.png'></image>
+              <text>店铺优惠券</text>
+            </view>
+            <view class='cardBottom'>
+              <view wx:if="{{item.couponRuleVelife.couponType==2}}">{{item. couponRuleVelife.name}}
+              </view>
+              <view wx:if="{{item.couponRuleVelife.couponType==1}}">折扣券{{item.couponRuleVelife.denomination*10}}折</view>
+              <view>使用时间:
+                <text>{{item.startTime}}——{{item.endTime}}</text>
+              </view>
+            </view>
+          </view>
+          <view class='carRight'>
+            <view class='zhe' wx:if="{{item.couponRuleVelife.couponType==1}}">
+              <text>{{item.couponRuleVelife.denomination*10}}</text>
+              <text>折</text>
+              <view class='jingq'>点击领取</view>
+            </view>
+            <view class='jian' wx:if="{{item.couponRuleVelife.couponType==2}}">
+              <text>¥</text>
+              <text>{{item.couponRuleVelife.denomination}}</text>
+              <view class='jingq'>点击领取</view>
+            </view>
+
+          </view>
+        </view>
+      </view>
+
+    </view>
+
+  </view>
+</view>
+<view class='mask1' wx:if="{{mask1}}">
+  <view class='sendBox'>
+    <view class='title'>绑定手机号</view>
+    <view class='maskMain'>
+      <view class='phone'>
+        <input placeholder='输入手机号' bindinput='phoneNum'></input>
+      </view>
+      <view class='code'>
+        <input placeholder='输入验证码' bindinput='codeNum'></input>
+        <view bindtap='sendCode' disabled="{{btnStatus}}" class='{{btnStatus?"disabled sure":" sure"}}'>{{send}}</view>
+      </view>
+    </view>
+    <view class='btnGroup'>
+      <view class='cancel' bindtap='hideMask1'>取消</view>
+      <view class='sure' bindtap='bindphone'>确定</view>
+    </view>
+  </view>
+</view>

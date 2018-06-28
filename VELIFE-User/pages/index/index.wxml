@@ -1,0 +1,70 @@
+<!--index.wxml-->
+
+<!-- <scroll-view scroll-y style="height: {{scrollHeight}}px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" lower-threshold="50" scroll-into-view="{{toView}}" enable-back-to-top="true" scroll-top="{{scrollTop}}"> -->
+<view class='mapBox'>
+  <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="12" markers="{{markers}}" bindmarkertap="markertap" wx:if="{{map}}" show-location></map>
+  <cover-view class='map-mask' wx:if="{{markStatus}}">
+    <cover-view class='mask_store'>{{markers[markIndex].store}}</cover-view>
+    <cover-view class='storeStatus'>即将开业</cover-view>
+    <cover-view class='km'>{{markers[markIndex].distance}}</cover-view>
+    <cover-view class='fen'></cover-view>
+    <cover-view class='member'>{{markers[markIndex].waitPerson}}人正在剪发</cover-view>
+    <cover-view class='mask_address'>{{markers[markIndex].address}}</cover-view>
+    <cover-view class='to' data-id="{{markers[markIndex].markId}}" bindtap='goto'>去剪发</cover-view>
+  </cover-view>
+</view>
+<view class='adBox'>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+    <block wx:for="{{imgUrls}}" wx:key="key">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="355" height="150" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class='nearby'>
+  <view class='nothing' wx:if="{{list.length==0}}">暂无数据...</view>
+  <view class='nearLi' wx:for="{{list}}" wx:key="key" data-id="{{item.id}}" bindtap='goto'>
+    <view>
+      <text class='store'>{{item.shopName}}</text>
+      <text class='noStart' wx:if="{{item.status!=1}}">即将开业</text>
+      <text class='pullRight'>{{item.distance}}</text>
+    </view>
+    <view>
+      <text>{{item.serviceItem}}</text>
+      <text class='price'>¥<text>{{item.price}}</text></text>
+      <text class='close pullRight' wx:if="{{index==0}}">离你最近</text>
+    </view>
+    <view style='display:flex;'>
+      <view class='prize' wx:if="{{item.firstCoupon?true:false}}">奖</view>
+      <text>{{item.firstCoupon?item.firstCoupon:''}}</text>
+    </view>
+    <view class='status'>
+      {{item.serviceCount}}人剪发
+    </view>
+    <view class='address'>
+      <text>{{item.address}}</text>
+
+
+ <!-- <form bindsubmit="goto" report-submit="true">
+              <button class='GoTo' formType="submit"  hover-stop-propagation="true" data-id="{{item.id}}" wx:if="{{item.status==1}}">去剪发</button>
+              <button class='GoTo noGo'  hover-stop-propagation wx:else>去剪发</button>
+            </form>  -->
+
+      <view class='GoTo' data-id="{{item.id}}" wx:if="{{item.status==1}}">去剪发</view>
+      <view class='GoTo noGo' wx:else>去剪发</view>
+    </view>
+
+
+
+  </view>
+</view>
+<view class='loading' wx:if="{{loading}}">
+  <view class='load'>
+    <image src='../../images/loading.gif'></image>
+  </view>
+  <view>正在加载...</view>
+</view>
+<!-- <image src="../../images/qrcode.jpg" bindlongtap='seenPic'></image> -->
+
+<!-- </scroll-view> -->

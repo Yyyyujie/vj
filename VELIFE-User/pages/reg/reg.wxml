@@ -1,0 +1,34 @@
+<view class="header">
+    <view class='txbox' style='background:url("{{header}}") center no-repeat'></view>
+    <view>{{userName}}</view>
+</view>
+<view class='formBox'>
+    <view class='nameBox'>
+        <view class='imgBox'>
+          <image src='../../images/name.png'></image>
+        </view>
+        <input placeholder='姓名' placeholder-class='inp'></input>
+        <view class='bottom'>
+          <image src='../../images/bottom.png'></image>
+        </view>
+    </view>
+     <view class='nameBox'>
+        <view class='imgBox phoneBox'>
+          <image src='../../images/phone.png'></image>
+        </view>
+        <input placeholder='手机号' placeholder-class='inp'></input>
+        <view class='bottom'>
+          <image src='../../images/bottom.png'></image>
+        </view>
+    </view>
+     <view class='nameBox'>
+        <view class='imgBox'>
+          <image src='../../images/code.png'></image>
+        </view>
+        <input placeholder='验证码' placeholder-class='inp'></input>
+        <view class='bottom'>
+          <image src='../../images/bottom.png'></image>
+        </view>
+    </view>
+</view>
+<button class='btn'>确定</button>

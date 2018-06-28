@@ -1,0 +1,68 @@
+<view class='header'>
+  <view class='tx'>
+    <image src='{{userInfo.headImage?userInfo.headImage:"../../images/logo.png"}}'></image>
+  </view>
+  <view class='wel'>HI,{{userInfo.nickName?userInfo.nickName:"未知"}}</view>
+</view>
+<view class='main'>
+  <view>年龄
+    <view class='pullRight'>
+      <view class="section">
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="picker">
+            {{array[index]}}
+          </view>
+        </picker>
+      </view>
+    </view>
+  </view>
+  <view>手机号
+    <text class='pullRight' bindtap='showMask1'>{{phone?phone:'请绑定手机号码'}}</text>
+  </view>
+  <view>性别
+    <view class='pullRight'>
+      <view class="section">
+        <picker bindchange="bindPickerChange1" value="{{index1}}" range="{{array1}}">
+          <view class="picker">
+            {{array1[index1]}}
+          </view>
+        </picker>
+      </view>
+    </view>
+  </view>
+  <view>职业
+    <text class='pullRight' bindtap='showMask2'>{{zhiw}}</text>
+  </view>
+</view>
+<view class='mask' wx:if="{{mask1}}">
+  <view class='sendBox'>
+    <view class='title'>更换手机号</view>
+    <view class='maskMain'>
+      <view class='phone'>
+        <input placeholder='输入手机号' bindinput='phoneNum'></input>
+      </view>
+      <view class='code'>
+        <input placeholder='输入验证码' bindinput='codeNum'></input>
+        <view bindtap='sendCode' disabled="{{btnStatus}}" class='{{btnStatus?"disabled sure":" sure"}}'>{{send}}</view>
+      </view>
+    </view>
+    <view class='btnGroup'>
+     <view class='cancel' bindtap='hideMask1'>取消</view>
+     <view class='sure' bindtap='bindphone'>确定</view>
+    </view>
+  </view>
+</view>
+<view class='mask2' wx:if="{{mask2}}">
+    <view class='zhiwBox'>
+      <view class='title'>更换职业</view>
+      <view class='maskMain'>
+         <view class='phone'>
+        <input placeholder='输入新的职业' bindinput='zhiw'></input>
+      </view>
+      </view>
+      <view class='btnGroup'>
+     <view class='cancel'  bindtap='hideMask2'>取消</view>
+     <view class='sure' bindtap='zhiwSure'>确定</view>
+    </view>
+    </view>
+</view>

@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/order/order",
+    "pages/me/me",
+    "pages/logs/logs",
+    "pages/store/store",
+    "pages/men/men",
+    "pages/number/number",
+    "pages/eva/eva",
+    "pages/person/person",
+    "pages/hair/hair",
+    "pages/evaList/evaList",
+    "pages/Coupon/Coupon",
+    "pages/join/join",
+    "pages/reg/reg",
+    "pages/serviceItem/serviceItem",
+    "pages/myOrder/myOrder",
+    "pages/invitation/invitation",
+    "pages/receive/receive",
+    "pages/storesLi/storesLi",
+    "pages/shopEva/shopEva",
+    "pages/menEvaList/menEvaList",
+    "pages/war/war"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#000",
+    "backgroundColor": "#fff",
+    "borderStyle": "#f6f6f6",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "剪发",
+        "iconPath": "./images/tabbar/index.png",
+        "selectedIconPath": "./images/tabbar/indexOn.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "./images/tabbar/order.png",
+        "selectedIconPath": "./images/tabbar/orderOn.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "./images/tabbar/me.png",
+        "selectedIconPath": "./images/tabbar/meOn.png"
+      }
+    ]
+  }
+}

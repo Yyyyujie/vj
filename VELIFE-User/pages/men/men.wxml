@@ -1,0 +1,184 @@
+<scroll-view scroll-y style="height: 100vh;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}" scroll-with-animation>
+  
+<view class='banner'>
+  <image src='../../images/banner.jpg'></image>
+  <view class='bannerZi'>
+    <image src='../../images/bannerZi.png' mode='widthFix'></image>
+  </view>
+  <view class='bot'>
+    <image src='../../images/bot.png'></image>
+  </view>
+</view>
+<view class='men'>
+  <view class='txBox'>
+    <view class='tx'>
+      <image src='{{info.barberInfo.headImage}}'></image>
+    </view>
+    <text>{{info.barberInfo.name}}</text>
+    <view class='zhiw'>
+      <view class='price'>¥
+        <text>{{info.barberInfo.priceRule.price}}</text>
+      </view>
+      <view>
+        <view class='pullRight btn'>{{info.barberInfo.workingLife}}经验</view>
+        <view class='pullRight btn'>{{info.barberInfo.titleEntity.name}}</view>
+      </view>
+    </view>
+  </view>
+  <view style='overflow:hidden;padding:30rpx 20rpx;'>
+    <view class='address'>{{info.shopInfo.address}}></view>
+    <view class='pullRight km'>
+     {{km}}
+    </view>
+  </view>
+  <view class='middle'></view>
+  <view class='tabBox'>
+    <view class='active ' data-id="flor1" bindtap="scrollToViewFn">
+      评论
+    </view>
+    <view   data-id="flor2"  bindtap="scrollToViewFn">
+      剪发经验
+    </view>
+    <view   data-id="flor3" bindtap="scrollToViewFn">
+      Ta的作品
+    </view>
+  </view>
+  <view class='evaTab'>
+        <view class='tab1'>
+          <view class='evaTop'>{{info.startLevel.statisticInfo.averageScore}}</view>
+          <view class='evaScoreLi'>
+              <view wx:for="{{5}}" wx:for-index="sIndex">
+                <image src='../../images/scroe.png' wx:if="{{sIndex>info.startLevel.statisticInfo.averageScore-1}}"></image>
+                <image src='../../images/scroeOn.png' wx:else></image>
+              </view>
+          </view>
+        </view>
+        <view class='tab1'>
+          <view class='evaTop'>{{info.startLevel.statisticInfo.preTotal}}%</view>
+          <view class='evaScoreLi'>
+              上月好评率
+          </view>
+        </view>
+
+    </view>
+    <view class='fiveBox'>
+      <view data-score="5" bindtap='evaList'>很满意({{info.startLevel.five?info.startLevel.five:0}})</view>
+      <view data-score="4">满意({{info.startLevel.four?info.startLevel.four:0}})</view>
+      <view data-score="3">一般({{info.startLevel.three?info.startLevel.three:0}})</view>
+      <view data-score="2">不满意({{info.startLevel.two?info.startLevel.two:0}})</view>
+      <view data-score="1">很不满意({{info.startLevel.one?info.startLevel.one:0}})</view>
+    </view>
+  <view class='evaBox' id="inToViewflor1">
+    <view class='evaList'>
+      <view class='evaLi' wx:for="{{commentList}}">
+        <view class='evaLeft'>
+          <image src='{{item.memberPic?item.memberPic:"../../images/logo.png"}}'></image>
+        </view>
+        <view class='evaRight'>
+          <view class='first'>
+            <text class='name'>{{item.shortName}}</text>(
+            <text>{{item.shortPhone}}</text>)</view>
+          <view class='con'>
+            {{item.conten}}
+          </view>
+          <view class='bottom'>
+            <view>发型师:
+              <text>{{item.barber.name}}</text>
+            </view>
+            <text class='pullRight'>{{item.createDate}}</text>
+          </view>
+        </view>
+        <view class='evaScro'>
+          <view class='evaScroLi' wx:for="{{5}}" wx:for-item="act">
+           
+             <image src='../../images/scroeOn.png' wx:if="{{act<item.starLevel}}"></image>
+              <image src='../../images/scroe.png' wx:else></image>
+          </view>
+
+        </view>
+      </view>
+      <view class='seeMore' bindtap='seeMore'>查看全部评论</view>
+    </view>
+  </view>
+  <view class='middle'></view>
+  <view class='title' id="inToViewflor2">
+    <view class='iconBox'>
+      <image src='../../images/logo.png'></image>
+    </view>
+    <text>HAIR</text>
+    <text>STYLIST</text>
+    <text>剪发经验</text>
+  </view>
+  <view class='workBox'>
+    <view class="year">{{info.barberInfo.workingLife}}工作经验</view>
+    <view class='progress'>
+      <view class='work' wx:for="{{info.workList}}">
+        <view class='worktitle'>
+          <text class='zw'>{{item.unit}}</text>
+          <text>{{item.post}}</text>
+        </view>
+        <view>在职时间:
+          <text>{{item.startTime}}-{{item.endTime}}</text>
+        </view>
+        <view class='card'>
+          <image src='../../images/workIcon.png'></image>
+        </view>
+      </view>
+    
+    </view>
+  </view>
+  <view class='middle'></view>
+  <view class='title' id="inToViewflor3">
+    <view class='iconBox'>
+      <image src='../../images/logo.png'></image>
+    </view>
+    <text>HAIR</text>
+    <text>STYLIST</text>
+    <text>Ta的作品</text>
+  </view>
+  <view class='zuopin'>
+    <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" wx:if="{{info.productionList.length!=0}}">
+  <block wx:for="{{info.productionList}}" wx:for-index="blockIndex">
+    <swiper-item>
+      <view class='imgNum'>{{item.pics.length}}</view>
+      <image src="{{item.pics}}" data-src="{{item.pics}}" bindtap="previewImage" class="slide-image" width="auto" mode='widthFix'/>
+      <view class='maskBox'>
+        <image src='../../images/maskBox.png'></image>
+      </view>
+       <view class='maskCon'>
+        <view>[发量]<text wx:for="{{arr1}}" class='{{index==indexGroup[blockIndex].actIndex1?"active":""}}'>{{item}}</text></view>
+         <view>[发质]<text wx:for="{{arr2}}" class='{{index==indexGroup[blockIndex].actIndex2?"active":""}}'>{{item}}</text></view>
+          <view>[脸型]<text wx:for="{{arr3}}" class='{{index==indexGroup[blockIndex].actIndex3?"active":""}}'>{{item}}</text></view>
+      </view> 
+    </swiper-item>
+  </block>
+</swiper>
+  </view>
+</view>
+<view class='footer'>
+  <view>前面有<text>{{info.barberInfo.waitPersons}}</text>人,约等待<text>{{info.barberInfo.waitHours}}</text>分钟</view>
+ <form bindsubmit="formSubmit" report-submit="true">
+              <button class='number'  formType="submit" data-id="{{info.barberInfo.id}}" wx:if="{{info.barberInfo.workStatus!=2}}">一键取号</button>
+           <button class='number nogo' wx:else>下班了</button>
+          </form>
+</view>
+</scroll-view>
+<view class='mask1' wx:if="{{mask1}}">
+  <view class='sendBox'>
+    <view class='title'>绑定手机号</view>
+    <view class='maskMain'>
+      <view class='phone'>
+        <input placeholder='输入手机号' bindinput='phoneNum'></input>
+      </view>
+      <view class='code'>
+        <input placeholder='输入验证码' bindinput='codeNum'></input>
+        <view bindtap='sendCode' disabled="{{btnStatus}}" class='{{btnStatus?"disabled sure":" sure"}}'>{{send}}</view>
+      </view>
+    </view>
+    <view class='btnGroup'>
+     <view class='cancel' bindtap='hideMask1'>取消</view>
+     <view class='sure' bindtap='bindphone'>确定</view>
+    </view>
+  </view>
+</view>

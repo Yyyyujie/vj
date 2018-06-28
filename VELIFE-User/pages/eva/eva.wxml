@@ -1,0 +1,38 @@
+<view class="main">
+  <view class='title'>
+    <view class='titleIcon'>
+      <image src='../../images/logo.png'></image>
+    </view>
+    <text>微剪生活</text>
+  </view>
+  <view class='evaCon'>
+    <textarea placeholder='留下您的评价吧~' placeholder-class='plac' bindinput='con'></textarea>
+    <view class='upload' bindtap='choose'>
+      <image src='../../images/camera.png'></image>
+    </view>
+    <view class='imgBox' wx:for="{{imgArr}}">
+      <image src='{{item}}' data-src="{{item}}" bindtap="previewImage"></image>
+    </view>
+  </view>
+  <view class="store">
+    <view>
+      <view class='storeIcon'>
+        <image src='../../images/home.png'></image>
+      </view>
+      <text>{{shopName}}</text>
+    </view>
+    <view class='evaScro'>
+      <view class='evaScroLi' wx:for="{{5}}" data-index="{{index}}" bindtap='star'>
+        <image src='../../images/scroeOn.png' wx:if="{{index<level}}"></image>
+        <image src='../../images/scroe.png' wx:else></image>
+      </view>
+    </view>
+  </view>
+  <view>
+      <view class='storeIcon'>
+        <image src='../../images/me.png'></image>
+      </view>
+      <text style='font-size:24rpx'>{{barberName}}</text>
+    </view>
+</view>
+<button class='sub' bindtap='sub'>提交评论</button>

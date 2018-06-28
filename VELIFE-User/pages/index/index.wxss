@@ -1,0 +1,218 @@
+/**index.wxss**/
+.mapBox{
+  width: 100%;
+  height: 380rpx;
+  position: relative;
+}
+.map-mask{
+  width: 250rpx;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.mask_store{
+  font-size: 30rpx;
+  font-weight: bold;
+  overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+margin-top: 20rpx;
+}
+.km{
+  font-size: 20rpx;
+  color: #333;
+  margin: 10rpx 0;
+}
+.fen{
+  width: 100%;
+  height: 1rpx;
+  background: #f4f4f4;
+  margin: 10rpx 0;
+}
+.member{
+  display: inline-block;
+  padding: 5rpx;
+  font-size: 21rpx;
+  letter-spacing: 4rpx;
+  border: 1rpx solid #ccc;
+  /* margin-top: 10rpx; */
+  border-radius: 5rpx;
+  color: #333;
+  margin: 10rpx 0;
+}
+.storeStatus{
+  display: inline-block;
+  font-size: 20rpx;
+  color: #fff;
+  background: #807d7d;
+  padding: 5rpx 10rpx;
+  border-radius: 5rpx;
+  letter-spacing: 2rpx;
+  margin: 10rpx 0;
+}
+.mask_address{
+  font-size: 22rpx;
+  color: #333;
+  overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+.to{
+  width: 80%;
+  height: 60rpx;
+  background: #E31E4C;
+  color: #fff;
+  position: absolute;
+  bottom: 20rpx;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font-size: 26rpx;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 10rpx;
+}
+#map{
+  width: 100%;
+  height: 100%;
+}
+.adBox{
+  width: 100%;
+  height: 200rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.adBox swiper,.adBox image{
+  width: 100%;
+  height: 100%;
+  border-radius:10rpx;
+  overflow:hidden;
+}
+.nearby{
+  width: 100%;
+}
+.nearLi{
+  width: 100%;
+  height: 300rpx;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-top: 1rpx solid #f5f5f5;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.nearLi:last-child{
+  border-bottom: 1rpx solid #f5f5f5;
+}
+.store{
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.price{
+  font-size: 28rpx;
+  color: #E31E4C;
+  margin-left: 20rpx;
+}
+.pullRight{
+  float: right
+}
+.close{
+  color: #E31E4C;
+}
+.prize{
+  width: 30rpx;
+  height: 30rpx;
+  background: #E31E4C;
+  border-radius: 8rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 30rpx;
+  font-size: 18rpx;
+  display: inline-block;
+  margin-right: 30rpx;
+}
+.store~text{
+  font-size: 32rpx;
+}
+.prize~text{
+  color: #C8C8C8;
+  font-size: 24rpx;
+}
+.status{
+  display: inline-block;
+  box-sizing: border-box;
+  border: 1rpx solid #ccc;
+  font-size: 24rpx;
+  width:150rpx;
+  height:40rpx;
+  text-align: center;
+  line-height:36rpx;
+  border-radius: 5rpx;
+}
+.GoTo{
+  width: 150rpx;
+  height: 60rpx;
+  background: #E31E4C;
+  color: #fff;
+  float: right;
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 60rpx;
+   position:absolute; 
+right:0;
+bottom:0;
+font-size:26rpx;
+
+}
+.address{
+  line-height: 60rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: 150rpx;
+  position: relative;
+}
+.store~.noStart{
+  display: inline-block;
+  padding: 10rpx;
+  color: #fff;
+  background: #aaa;
+  font-size:18rpx;
+border-radius:10rpx;
+margin-left:15rpx;
+}
+.GoTo.noGo{
+  background: #aaa;
+}
+.loading{
+  text-align: center;
+  font-size: 30rpx;
+  display:flex;
+justify-content:center;
+align-items:center;
+
+}
+.load{
+  display: inline-block;
+  height: 40rpx;
+  width: 40rpx;
+}
+.load image{
+  width: 100%;
+  height: 100%;
+}
+.nothing{
+  font-size: 28rpx;
+  color: #ccc;
+  text-align: center;
+  line-height: 100rpx;
+}

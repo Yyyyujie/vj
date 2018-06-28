@@ -1,0 +1,75 @@
+page{
+  background: #F4F4F4;
+}
+.header{
+  width: 100%;
+  height: 400rpx;
+  margin-bottom: 50rpx;
+  text-align: center;
+  padding-top: 100rpx;
+  box-sizing: border-box;
+}
+.txbox{
+  width: 200rpx;
+  height: 200rpx;
+  margin: 0 auto 20rpx;
+  border-radius: 50%;
+  overflow: hidden;
+background-size: contain;
+}
+.formBox{
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 5%;
+  box-sizing: border-box;
+  background: #FEFEFE;
+  border-radius: 20rpx;
+}
+.nameBox{
+  width: 100%;
+  height: 120rpx;
+  position: relative;
+}
+.nameBox input{
+    padding-left: 60rpx;
+    height: 120rpx;
+    line-height: 120rpx;
+    font-size: 28rpx;
+  }
+  .inp{
+    color: #B8B8B8;
+  }
+.imgBox{
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+image{
+  width: 100%;
+  height: 100%;
+}
+.bottom{
+  width: 100%;
+  height:20rpx;
+  position:absolute;
+  bottom:0;
+}
+.phoneBox{
+  height: 35rpx;
+  width: 25rpx;
+}
+.imgBox image{
+  float: left;
+}
+.btn{
+  width: 90%;
+  font-size: 30rpx;
+  background: #E31E4C;
+  color: #fff;
+  margin-top: 50rpx;
+  letter-spacing: 4rpx;
+}

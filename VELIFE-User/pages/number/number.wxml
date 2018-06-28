@@ -1,0 +1,34 @@
+<view class='numberSuccess'>
+    <icon type='success_no_circle' color='#E31744' size='46'></icon>
+    <text class='numberOk'>取号成功</text>
+    <text>请注意排队时间及时到店，等待叫号剪发</text>
+</view>
+<view class='main'>
+  <view class='mainBox'>
+    <view class='mainTop'>
+    <view>
+      <view class='num'>{{orderNo}}</view>
+      <view>排队号码</view>
+    </view>
+    <view>
+      <view class='num'>{{waitPerson}}</view>
+      <view>前面人数</view>
+    </view>
+    <view>
+      <view class='num'>{{waitHour=="null"?0:waitHour}}</view>
+      <view>预计等待/分钟</view>
+    </view>
+  </view>
+    <view class='type'>
+      <view>{{itemName}}</view>
+      <view>¥<text>{{orderPrice}}</text></view>
+    </view>
+    <view class='Con'>
+    <view>温馨提示：</view>
+    <view class='tip'>优惠券和团购券在结算时使用</view>
+    <view class='tip'>为了不影响您的排队信誉，如不剪发，请及时取消排号或选择重排</view>
+    <view class='tip'>等待时间仅供参考，请留意公众号实时排队提醒</view>
+  </view>
+  </view>
+</view>
+<button class='ikonw' bindtap='back'>我知道了</button>

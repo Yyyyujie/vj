@@ -1,0 +1,87 @@
+page{
+  background: #EFEFEF;
+}
+.numberSuccess{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  padding: 40rpx 0;
+  font-size: 28rpx;
+  margin-bottom: 20rpx;
+}
+.numberOk{
+  font-size: 40rpx;
+  margin: 20rpx;
+}
+.main{
+  padding: 20rpx;
+}
+.mainTop{
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 24rpx;
+  color: #818181;
+  padding: 50rpx 0;
+}
+.num{
+  font-size: 40rpx;
+  color: #000;
+}
+.mainBox{
+  padding: 0 20rpx;
+  background: #fff;
+}
+.type{
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 50rpx 20rpx;
+  box-sizing: border-box;
+  font-size: 30rpx;
+  color: #E5254A;
+  border-top: 1rpx solid #F8F8F8;
+  border-bottom: 1rpx solid #F8F8F8;
+}
+.type view:nth-child(1){
+  color: #000;
+}
+.Con{
+  padding: 30rpx 20rpx;
+  font-size: 24rpx;
+  color: #818181;
+  line-height: 40rpx;
+}
+.Con view:nth-child(1){
+  padding-left: 0;
+}
+.Con view{
+  position: relative;
+  padding-left: 10rpx;
+}
+.tip::before{
+  content: "";
+  display: block;
+  width: 6rpx;
+  height: 6rpx;
+  background: #818181;
+  border-radius: 50%;
+  position: absolute;
+  top: 20rpx;
+  left: -5rpx;
+}
+.ikonw{
+  position: fixed;
+  bottom: 20rpx;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 80%;
+  background: #E60048;
+  color: #fff;
+}

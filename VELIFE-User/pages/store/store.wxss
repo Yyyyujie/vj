@@ -1,0 +1,728 @@
+page ,.all{
+  width: 100%;
+  height: 100%;
+}
+.banner {
+  width: 100%;
+  height: 32%;
+  position: relative;
+  overflow:hidden;
+}
+
+.banner image {
+  width: 100%;
+  height: 100%;
+}
+
+.bannerZi {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background: rgba(0, 0, 0, 0.75);
+padding-bottom:30rpx;
+
+}
+
+.bannerZi image {
+  width: 50%;
+  height: 70%;
+}
+
+.bot {
+  width: 100%;
+  height: 40rpx;
+  position: absolute;
+  left: 0rpx;
+  bottom: -4rpx;
+}
+
+.bot image {
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  width: 100%;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.iconBox {
+  width: 30rpx;
+  height: 30rpx;
+  float: left;
+  margin-right: 10rpx;
+}
+
+.iconBox image {
+  width: 100%;
+  height: 100%;
+  display: inherit;
+}
+
+.title>text:nth-child(2) {
+  font-weight: bold;
+  font-size: 22rpx;
+  margin-right: 10rpx;
+}
+
+.title>text:nth-child(3) {
+  font-size: 22rpx;
+  margin-right: 10rpx;
+  color: #6d6f73;
+}
+
+.title>text:nth-child(4) {
+  font-size: 28rpx;
+}
+
+.hairLi {
+  width: 100%;
+  height: 340rpx;
+  background: #ebebeb;
+  border: 1rpx solid #d7d7d7;
+  border-radius: 10rpx;
+  margin-top: 30rpx;
+  padding: 15rpx;
+  box-sizing: border-box;
+}
+
+.hairLiModel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.hairLeft {
+  width:38%;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+
+.hairLeft image {
+  height: 100%;
+  width: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.hairRight {
+  width: 60%;
+  height: 100%;
+  float: right;
+   display: flex;
+  flex-direction: column;
+  justify-content: space-around; 
+  position: relative;
+}
+.form{
+  display:block;
+height:80rpx;
+
+}
+
+.icon {
+  width: 30rpx;
+  height: 38rpx;
+  float: left;
+  margin-right: 20rpx;
+}
+
+.icon image {
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+
+.icon~text {
+  font-size: 26rpx;
+  line-height: 35rpx;
+}
+
+.vBox {
+  overflow: hidden;
+  margin:10rpx 0;
+}
+
+.vLi {
+  width: 30rpx;
+  height: 35rpx;
+  margin-right: 25rpx;
+  float: left;
+}
+
+.vLi image {
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+
+.wait {
+  font-size: 24rpx;
+  color: #9e9e9e;
+}
+
+.wait>text:nth-child(1) {
+  color: #e01c44;
+  margin-right: 20rpx;
+}
+
+.wait>text:nth-child(2) {
+  font-size: 20rpx;
+}
+
+.zhi {
+  display: flex;
+  align-items: center;
+  margin:10rpx 0 20rpx;
+}
+
+.number {
+  width: 100%;
+  height: 80rpx;
+  margin-left: 0;
+  background: #e01c44;
+  color: #fff;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.hairMore {
+  text-align: center;
+  font-size: 28rpx;
+  margin-top:20rpx;
+  display:table;
+padding:10rpx 20rpx;
+border:1rpx solid #ccc;
+border-radius:10rpx;
+margin:0 auto;
+
+}
+
+.get {
+  width: 100rpx;
+  height: 40rpx;
+  background: #e01c44;
+  float: right;
+  color: #fff;
+  font-size: 22rpx;
+  text-align: center;
+  line-height: 40rpx;
+  border-radius: 10rpx;
+  position: absolute;
+  right: 0;
+}
+
+.evaBox {
+  width: 100%;
+  margin-top: 30rpx;
+  box-sizing: border-box;
+}
+
+.evaList {
+  width: 100%;
+  margin-top: 20rpx;
+  padding:20rpx;
+box-sizing:border-box;
+
+}
+
+.evaLi {
+  display: flex;
+  margin-bottom: 20rpx;
+}
+
+.evaLeft {
+  width: 80rpx;
+  height: 80rpx;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.evaRight {
+  flex: 1;
+  font-size: 28rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+
+.scroll {
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+image {
+  width: 100%;
+  height: 100%;
+}
+
+.first {
+  color: #8c929e;
+}
+
+.name {
+  color: #000;
+  margin-right: 10rpx;
+}
+
+.score {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.con {
+  color: #5e5d64;
+  line-height: 34rpx;
+  margin: 20rpx 0;
+}
+
+.conImg {
+  width: 200rpx;
+  height: 200rpx;
+  float: left;
+  margin: 20rpx;
+}
+
+.pullRight {
+  float: right;
+}
+
+.imgBox, .bottom {
+  overflow: hidden;
+  color: #a3a7b1;
+}
+
+.bottom>view {
+  float: left;
+}
+
+.storeAd {
+  padding:20rpx 0;
+  box-sizing: border-box;
+}
+
+.storeAd .title {
+  margin-bottom: 40rpx;
+}
+
+.adIcon {
+  width: 36rpx;
+  height: 40rpx;
+  float: left;
+}
+
+.adIcon~view {
+  width: 90%;
+  float: right;
+  font-size: 26rpx;
+  color: #8c8c8d;
+  letter-spacing: 4rpx;
+}
+
+.call, .time {
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 26rpx;
+  color: #8c8c8d;
+  line-height: 40rpx;
+}
+
+.address {
+  overflow: hidden;
+}
+
+.mask {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.cardBox {
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  bottom: 0;
+  background: #fff;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 90%;
+  height: 200rpx;
+  margin: 60rpx auto;
+  position: relative;
+}
+
+.card>image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.closeBtn {
+  width: 60rpx;
+  height: 80rpx;
+  position: absolute;
+  top: -80rpx;
+  right: 40rpx;
+}
+
+.cancel {
+  position: relative;
+}
+
+.cancel::after {
+  content: "";
+  display: block;
+  width: 2rpx;
+  height: 35rpx;
+  background: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.cardCon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.cardLis {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  margin-top:10rpx;
+}
+
+.noscroll {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  z-index: 0;
+}
+.cardLeft{
+  width: 60%;
+  height: 100%;
+  float: left;
+  font-size: 26rpx;
+  color: #fff;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.carRight{
+  width: 40%;
+  height: 100%;
+  float: right;
+  padding: 30rpx;
+  box-sizing: border-box;
+  color: #fff;
+  position: relative;
+  text-align:right;
+}
+.cardTitle{
+ width:150rpx;
+height:80rpx;
+  text-align: center;
+  position: relative;
+  font-size:20rpx;
+
+}
+.cardTitle>image{
+  height: 100%;
+  width: 50%;
+  display: inline-block;
+}
+.cardTitle text{
+  font-size: 25rpx;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  line-height: 80rpx;
+  color: #fff;
+}
+.cardBottom view{
+  letter-spacing: 2rpx;
+  line-height: 30rpx;
+  font-size:20rpx;
+}
+.cardBottom view:last-child{
+  font-size: 16rpx;
+  letter-spacing: 0;
+}
+.cardBottom{
+  position: absolute;
+  bottom: 20rpx;
+  left: 40rpx;
+}
+.carRight text:nth-child(2){
+  font-size:100rpx;
+line-height:120rpx;
+  padding-left: 20rpx;
+}
+.carRight text:nth-child(1){
+  display: block;
+  position: absolute;
+  right:140rpx;
+  top: 40rpx;
+}
+.money{
+  position:absolute;
+  right:20rpx;
+  top:0;
+  color:#E31E4C;
+  font-size:44rpx;
+  font-weight:normal;
+}
+.number.nogo{
+  background: #aaa;
+}
+.bannerZi>view{
+text-align:center;
+
+color:#616162;
+font-size:28rpx;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+.addIcon{
+  display: inline-block;
+  width: 50rpx;
+  height: 40rpx;
+}
+.serverBox{
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 100rpx;
+}
+.serverLi{
+  width: 50%;
+  float: left;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+.serverTitle,.serverBox{
+  font-size: 28rpx;
+  color: #8c8c8d;
+}
+.serverTitle{
+  color: #333;
+  font-size: 30rpx;
+  line-height: 80rpx;
+}
+.seIcon{
+  width: 50rpx;
+  height: 50rpx;
+  display: inline-block;
+  margin-right: 20rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.mask1{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.8);
+}
+.sendBox,.zhiwBox{
+  width: 90%;
+  height: 400rpx;
+  background: #fff;
+  position: absolute;
+   top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+.sendBox .title,.zhiwBox .title{
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  display: block;
+}
+.maskMain{
+  width: 100%;
+  padding:  0 20rpx;
+  box-sizing: border-box;
+}
+.phone,.code{
+  width: 100%;
+  height: 90rpx;
+  background: #F5F5F7;
+  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+  position: relative;
+  overflow: hidden;
+}
+.phone input,.code input{
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 26rpx;
+  padding-left: 20rpx;
+}
+.btnGroup{
+  width: 100%;
+  height: 90rpx;
+  background: #F5F5F7;
+  position: absolute;
+  bottom: 0;
+}
+.btnGroup view{
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  background: #F5F5F7;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 28rpx;
+}
+.btnGroup .sure{
+  background: #E60048;
+  color: #fff;
+}
+.code .sure{
+  width: 35%;
+  height: 100%;
+  background: #E60048;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 28rpx;
+  z-index: 99
+}
+.code .sure.disabled{
+  background: #ccc;
+}
+.zhiwBox .phone{
+  margin-top: 50rpx;
+}
+.jingq{
+  font-size: 24rpx;
+}
+.noQuan{
+  font-size: 24rpx;
+  text-align: center;
+  line-height:200rpx;
+}
+.zhe text:nth-child(1){
+  font-size:80rpx;
+line-height:120rpx;
+  position:unset;
+}
+.zhe text:nth-child(2){
+  display:100rpx;
+position:absolute;
+right:5px;
+bottom:35px;
+font-size:24rpx;
+line-height:initial;
+}
+.evaBox::before,.storeAd::before{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 30rpx;
+  background: #f5f5f5;
+}
+.evaBox .title,.storeAd .title,.address,.serverTitle,.serverBox{
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.hairdresser{
+  margin-bottom: 60rpx;
+}
+.evaTab{
+  width: 100%;
+  height: 150rpx;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items:center;
+  font-size: 26rpx;
+  color: #666;
+  border-bottom:1rpx solid #f5f5f5;
+}
+.evaScoreLi{
+ display: flex;
+  justify-content: center;
+}
+.evaScoreLi>view{
+  width: 24rpx;
+  height: 24rpx;
+ 
+}
+.evaScoreLi>view image{
+  width: 100%;
+  height: 100%;
+}
+.evaTop{
+  font-size:36rpx;
+color:#000;
+text-align: center;
+}
+.tab1{
+  width: 33%;
+  position: relative;
+}
+.tab1:last-child::after{
+  width: 0;
+}
+.tab1::after{
+  content: "";
+  display: block;
+  height: 100%;
+  width: 1rpx;
+  background: #f5f5f5;
+  position: absolute;
+  right: 0;
+  top: 0;
+}

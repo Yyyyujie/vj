@@ -1,0 +1,6 @@
+<view class="txBox">
+  <image src='../../images/logo.png'></image>
+</view>
+<view class='title'>微剪生活</view>
+<view class='titleEng'>VELIFE</view>
+<button class='btn' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">微信一键登录</button>

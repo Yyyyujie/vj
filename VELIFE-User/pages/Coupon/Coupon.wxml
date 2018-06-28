@@ -1,0 +1,76 @@
+<view class='main'>
+  <view class="inputBox">
+    <input placeholder='请输入纸质兑换码'></input>
+    <view class='btn'>立即兑换</view>
+  </view>
+ <view class='cardBox'>
+   <view class='first'>
+    <view class='title'>
+      <view class='iconBox'>
+        <image src='../../images/logo.png'></image>
+      </view>
+      <text>HAIR</text>
+      <text>STYLIST</text>
+      <text>邀请好友即可领取</text>
+    </view>
+    <view class='card' data-CardId='{{invitation.id}}' bindtap='share'>
+      <view class='cardLeft'>
+        <view class='cardTitle'>
+          <image src='../../images/card.png'></image>
+          <text>店铺优惠券</text>
+        </view>
+        <view class='cardBottom'>
+          <view>邀请特惠</view>
+          <view>{{invitation.couponRuleVelife.name}}</view>
+          <view>使用方式:
+            <text>点击邀请</text>
+          </view>
+        </view>
+      </view>
+      <view class='carRight'>
+        <text>¥</text>
+        <text>{{invitation.couponRuleVelife.denomination?invitation.couponRuleVelife.denomination:0}}</text>
+      </view>
+    </view>
+
+  </view>
+  <view class='first'>
+    <view class='title'>
+      <view class='iconBox'>
+        <image src='../../images/logo.png'></image>
+      </view>
+      <text>HAIR</text>
+      <text>STYLIST</text>
+      <text>已领取</text>
+    </view>
+    <view class='card' wx:for="{{list}}">
+      <view class='cardLeft'>
+        <view class='cardTitle'>
+          <image src='../../images/card.png'></image>
+          <text>店铺优惠券</text>
+        </view>
+        <view class='cardBottom'>
+          <view>{{item.couponRuleVelife.name}}</view>
+          <view wx:if="{{item.couponRuleVelife.couponType==3}}">邀请奖励</view>
+          <view wx:if="{{item.couponRuleVelife.couponType==2}}">首单优惠</view>
+          <view wx:if="{{item.couponRuleVelife.couponType==1}}">折扣优惠</view>
+          <view>使用时间:
+            <text>{{item.startTime}}——{{item.endTime}}</text>
+          </view>
+        </view>
+      </view>
+      <view class='carRight'>
+          <view class='zhe' wx:if="{{item.couponRuleVelife.couponType==1}}">
+            <text>{{item.couponRuleVelife.denomination*10}}</text>
+            <text>折</text>
+          </view>
+          <view class='money' wx:if="{{item.couponRuleVelife.couponType==2||item.couponRuleVelife.couponType==3}}">
+            <text>¥</text>
+            <text>{{item.couponRuleVelife.denomination}}</text>
+          </view>
+      </view>
+    </view>
+
+  </view>
+ </view>
+</view>

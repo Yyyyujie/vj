@@ -1,0 +1,53 @@
+<view class='contain'>
+    <view class='barber'>
+        <view class='barberImgBox'>
+            <image src='{{headImg}}'></image>
+        </view>
+        <view class='barberCon'>
+          <view class='barberName'>{{name}}</view>
+          前面有{{person}}人，约等待{{hours}}分钟
+        </view>
+    </view>
+    <view class='fen'>
+      服务项
+    </view>
+    <view class='itemCon'>
+    <radio-group class="radio-group" bindchange="radioChange">
+        <view class='item' wx:for="{{list}}" wx:key="key">
+            <view>{{item.name}}</view>
+            <view>{{item.description}}</view>
+            <radio value="{{index}}" checked="{{index==0?true:false}}" color="#E21A44"/>
+        </view>
+        </radio-group>
+    </view>
+    <view class='bottomBox'>
+        <view class='moneyBox'>
+            <view>¥{{price}}</view>
+            <!-- <view>(已省¥38.0)</view> -->
+        </view>
+        <form bindsubmit="formSubmit" report-submit='true'>
+            <button class='qhBtn' formType="submit">
+              确认取号
+            </button>
+          </form>
+        
+    </view>
+</view>
+<view class='mask' wx:if="{{mask1}}">
+  <view class='sendBox'>
+    <view class='title'>更换手机号</view>
+    <view class='maskMain'>
+      <view class='phone'>
+        <input placeholder='输入手机号' bindinput='phoneNum'></input>
+      </view>
+      <view class='code'>
+        <input placeholder='输入验证码' bindinput='codeNum'></input>
+        <view bindtap='sendCode' disabled="{{btnStatus}}" class='{{btnStatus?"disabled sure":" sure"}}'>{{send}}</view>
+      </view>
+    </view>
+    <view class='btnGroup'>
+     <view class='cancel' bindtap='hideMask1'>取消</view>
+     <view class='sure' bindtap='bindphone'>确定</view>
+    </view>
+  </view>
+</view>

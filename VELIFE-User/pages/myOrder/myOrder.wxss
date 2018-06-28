@@ -1,0 +1,364 @@
+.main{
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.tabBox{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 26rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.tabBox view{
+  position: relative;
+  text-align: center;
+}
+.tabBottom{
+  width: 100rpx;
+  height: 20rpx;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.tabBottom image{
+  width: 100%;
+  height: 100%;
+  float:left;
+}
+.tabBox .active{
+  color: #E40D4A;
+}
+.tabCon,.Con{
+  width: 100%;
+  font-size: 28rpx;
+  line-height: 50rpx;
+  position: relative;
+  overflow:hidden;
+
+}
+.store{
+  font-size: 36rpx;
+  margin: 20rpx 0;
+}
+.num{
+  font-size: 38rpx;
+  color: #E40D4A;
+}
+.left{
+  width: 50%;
+  float: left;
+}
+.Con .time{
+  color: #9A9A9A;
+}
+.pullleft{
+  float: left
+}
+.flexBox{
+  width: 100%;
+  display: flex;
+}
+.flexBox .pullleft~view{
+  flex:1;
+}
+.cancel{
+  padding: 10rpx 20rpx;
+  background: #999999;
+  color: #fff;
+  font-size: 26rpx;
+  float: right;
+}
+.point{
+  color: #E40D4A;
+}
+.status{
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 26rpx;
+  color: #E40D4A;
+}
+.qx{
+  color: #000;
+}
+.eva{
+  background: #E40D4A
+}
+scroll-view{
+  position: absolute;
+  top: 50rpx;
+  width: 100%;
+  left: 0;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.nothing{
+  text-align: center;
+  line-height: 200rpx;
+  font-size: 28rpx;
+  color:#aaa;
+}
+
+
+
+
+.mask {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.cardBox {
+  width: 100%;
+  height: 70%;
+  position: absolute;
+  bottom: 0;
+  background: #fff;
+  padding-bottom:120rpx;
+  box-sizing: border-box;
+}
+.cardBox .title{
+  padding: 20rpx 20rpx 0;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 90%;
+  height: 200rpx;
+  margin: 60rpx auto;
+  position: relative;
+}
+
+.card>image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width:100%;
+height:100%;
+
+}
+
+.closeBtn {
+  width: 60rpx;
+  height: 80rpx;
+  position: absolute;
+  top: -80rpx;
+  right: 40rpx;
+}
+
+.close {
+  position: relative;
+}
+
+.close::after {
+  content: "";
+  display: block;
+  width: 2rpx;
+  height: 35rpx;
+  background: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.cardCon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.cardLis {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  margin-top:10rpx;
+}
+
+.noscroll {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  z-index: 0;
+}
+.cardLeft{
+  width: 60%;
+  height: 100%;
+  float: left;
+  font-size: 26rpx;
+  color: #fff;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.carRight{
+  width: 40%;
+  height: 100%;
+  float: right;
+  padding: 30rpx;
+  box-sizing: border-box;
+  color: #fff;
+  position: relative;
+  text-align:right;
+}
+.cardTitle{
+ width:150rpx;
+height:80rpx;
+  text-align: center;
+  position: relative;
+  font-size:20rpx;
+
+}
+.cardTitle>image{
+  height: 100%;
+  width: 50%;
+  display: inline-block;
+}
+.cardTitle text{
+  font-size: 25rpx;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  line-height: 80rpx;
+  color: #fff;
+}
+.cardBottom view{
+  letter-spacing: 2rpx;
+  line-height: 30rpx;
+  font-size:20rpx;
+}
+.cardBottom view:last-child{
+  font-size: 16rpx;
+  letter-spacing: 0;
+}
+.cardBottom{
+  position: absolute;
+  bottom: 20rpx;
+  left: 40rpx;
+}
+.carRight text:nth-child(2){
+  font-size:100rpx;
+line-height:120rpx;
+  padding-left: 20rpx;
+}
+.carRight text:nth-child(1){
+  display: block;
+  position: absolute;
+  right:140rpx;
+  top: 40rpx;
+}
+.money{
+  position:absolute;
+right:20rpx;
+top:0;
+color:#E31E4C;
+font-size:44rpx;
+font-weight:lighter;
+
+}
+.noQuan{
+  text-align: center;
+  font-size: 26rpx;
+  color: #aaa;
+  line-height: 100rpx;
+}
+.get {
+  width: 100rpx;
+  height: 40rpx;
+  background: #e01c44;
+  float: right;
+  color: #fff;
+  font-size: 22rpx;
+  text-align: center;
+  line-height: 40rpx;
+  border-radius: 10rpx;
+  position: absolute;
+  right: 0;
+}
+.payBox{
+  width: 100%;
+  height: 100rpx;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction:row-reverse;
+  align-items: center;
+  padding-right: 30rpx;
+  border-top: 1rpx solid #ccc;
+  background: #fff;
+  box-sizing:border-box;
+}
+.payTo{
+  padding: 10rpx 20rpx;
+  color: #fff;
+  font-size: 28rpx;
+  float: right;
+  background: #e01c44;
+  margin-left: 20rpx;
+  border-radius:10rpx;
+}
+.zhe text:nth-child(1){
+  font-size:100rpx;
+line-height:167rpx;
+position:unset;
+margin-right:30rpx;
+
+}
+.zhe text:nth-child(2){
+  display:100rpx;
+position:absolute;
+right:15px;
+bottom:30px;
+font-size:24rpx;
+line-height:initial;
+
+}
+.title {
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.iconBox {
+  width: 30rpx;
+  height: 30rpx;
+  float: left;
+  margin-right: 10rpx;
+}
+
+.iconBox image {
+  width: 100%;
+  height: 100%;
+  display: inherit;
+}
+
+.title>text:nth-child(2) {
+  font-weight: bold;
+  font-size: 22rpx;
+  margin-right: 10rpx;
+}
+
+.title>text:nth-child(3) {
+  font-size: 22rpx;
+  margin-right: 10rpx;
+  color: #6d6f73;
+}
+
+.title>text:nth-child(4) {
+  font-size: 28rpx;
+}

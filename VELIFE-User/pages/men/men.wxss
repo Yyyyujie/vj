@@ -1,0 +1,538 @@
+page{
+  width: 100%;
+  height: 100%;
+}
+.banner{
+  width: 100%;
+  height: 32%;
+  position: relative;
+}
+.banner image{
+  width: 100%;
+  height: 100%;
+}
+.bannerZi{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.75);
+}
+.bannerZi image{
+  width: 50%;
+  height: 70%;
+}
+.bot{
+  width: 100%;
+  height: 40rpx;
+  position: absolute;
+  left: 0rpx;
+  bottom: -4rpx;
+}
+.bot image{
+  width: 100%;
+  height: 100%;
+}
+.men{
+  width: 100%;
+  box-sizing: border-box;
+}
+.txBox{
+ width:100%;
+  height:190rpx;
+  padding-bottom:20rpx;
+  border-bottom:1rpx solid #f5f5f5;
+  padding:20rpx;
+  box-sizing:border-box;
+}
+.tx{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  float: left;
+  margin-right: 30rpx;
+}
+.tx image{
+  width: 100%;
+  height: 100%;
+}
+.tx~text{
+  font-size: 40rpx;
+  line-height: 100rpx;
+}
+.zhiw,.pullRight{
+  float: right;
+}
+.zhiw{
+  text-align: right;
+  color: #F13050;
+}
+.btn{
+  padding: 5rpx 20rpx;
+  font-size: 26rpx;
+  color: #fff;
+  background: #000;
+  margin-left: 20rpx;
+  border-radius: 10rpx;
+}
+.btn:nth-child(2){
+  background: #586A82;
+}
+.address{
+  float: left;
+  font-size: 26rpx;
+}
+.km{
+  font-size: 26rpx; 
+}
+.tabBox{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  border-top: 1rpx solid #f5f5f5;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+.tabBox view{
+  height: 100%;
+  padding: 20rpx 15rpx;
+  font-size: 30rpx;
+}
+.tabBox .active{
+  border-bottom: 4rpx solid #EA3751;
+  color: #EA3751;
+}
+.evaList{
+  width: 100%;
+  margin-top: 20rpx;
+}
+.evaLi{
+  display: flex;
+  margin:40rpx 0;
+  position: relative;
+}
+.evaLeft{
+  width: 100rpx;
+  height: 100rpx;
+  background: red;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.evaRight{
+  flex: 1;
+  font-size: 28rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.scroll{
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+image{
+  width: 100%;
+  height: 100%;
+}
+.first{
+  color: #8C929E;
+}
+.name{
+  color: #000;
+  margin-right: 10rpx;
+}
+.score{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.con{
+  color: #5E5D64;
+  line-height: 34rpx;
+  margin: 20rpx 0;
+}
+.conImg{
+  width: 200rpx;
+  height: 200rpx;
+  float: left;
+  margin: 20rpx;
+}
+.pullRight{
+  float: right;
+}
+.imgBox,.bottom{
+  overflow: hidden;
+  color: #A3A7B1;
+}
+.bottom>view{
+  float: left;
+}
+.evaScro{
+  width:132rpx;
+height:26rpx;
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: space-around
+}
+.evaScroLi{
+  width: 24rpx;
+  height: 24rpx;
+}
+.evaScroLi image{
+  float: left;
+}
+.seeMore{
+  padding: 20rpx;
+  border: 1rpx solid #ccc;
+  font-size: 26rpx;
+  display: inline-block;
+  border-radius: 10rpx;
+  margin-left: 36%;
+}
+.title{
+  display: flex;
+  align-items: center;
+   margin-top: 20rpx;
+   padding: 20rpx;
+}
+.iconBox{
+  width: 30rpx;
+  height: 30rpx;
+  float: left;
+  margin-right: 10rpx;
+}
+.iconBox image{
+  width: 100%;
+  height: 100%;
+  display:inherit;
+}
+.title>text:nth-child(2){
+  font-weight: bold;
+  font-size: 22rpx;
+  margin-right: 10rpx;
+}
+.title>text:nth-child(3){
+  font-size: 22rpx;
+  margin-right: 10rpx;
+  color: #6D6F73;
+}
+.title>text:nth-child(4){
+  font-size: 28rpx;
+}
+.year{
+  width: 50%;
+  height: 80rpx;
+  background: #19181E;
+  color: #fff;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  letter-spacing: 6rpx;
+  border-radius: 10rpx;
+}
+.work{
+  padding-left: 60rpx;
+  font-size: 30rpx;
+  position: relative;
+  height: 104rpx;
+  padding-top: 100rpx;
+  color: #9C9BA5;
+}
+.worktitle{
+  letter-spacing: 4rpx;
+  margin-bottom: 20rpx;
+  display: block;
+  margin-top: 0;
+  font-size: 30rpx;
+} 
+.progress .work:nth-child(1) .card::before{
+  height: 95rpx;
+  top: -102rpx;
+}
+.card{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  left: 0;
+  top: 104rpx;
+}
+.card::before{
+  content:"";
+  display: block;
+  width: 2rpx;
+  height: 140rpx;
+  position: absolute;
+  top: -150rpx;
+  background: #F4F4F4;
+  margin-left: 19rpx;
+  margin-bottom: 8rpx;
+}
+.card image{
+  width: 100%;
+  height: 100%;
+}
+.zw{
+  color: #000;
+}
+.zw::after{
+  content: "";
+  display: inline-block;
+  width: 8rpx;
+  height: 8rpx;
+  background: #000;
+  border-radius: 50%;
+  margin: 0 20rpx 4rpx;
+}
+
+.zuopin{
+  padding: 30rpx;
+  border-radius: 30rpx;
+  overflow: hidden;
+}
+.zuopin swiper{
+  height: 700rpx;
+  border-radius: 30rpx;
+  overflow: hidden;
+}
+.footer{
+  width: 100%;
+  border-top: 1rpx solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 40rpx;
+  box-sizing: border-box;
+  align-items: center;
+   font-size: 28rpx;
+   margin-bottom: 30rpx;
+}
+.footerBtn{
+  padding: 20rpx 80rpx;
+  background: #E01C44;
+  color: #fff;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  letter-spacing: 4rpx;
+}
+.imgNum{
+  width:50rpx;
+height:50rpx;
+background:#E01C44;
+position:absolute;
+left:10rpx;
+top:10rpx;
+box-shadow:7rpx 8rpx 0 0 rgba(277,30,76,0.6);
+text-align: center;
+line-height: 50rpx;
+color: #fff;
+}
+.maskBox{
+  width: 100%;
+  height: 250rpx;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity:0.9;
+}
+.maskCon{
+ width:100%;
+  height:250rpx;
+  position:absolute;
+  bottom:0;
+  left:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-around;
+  color:#fff;
+  font-size:26rpx;
+  padding:20rpx;
+  box-sizing:border-box;
+
+}
+.maskCon>view{
+  display: flex;
+  align-items: center;
+}
+.maskCon>view>text{
+  margin: 0 10rpx;
+  color: #aaa;
+}
+.maskCon>view>text.active{
+  color: #fff;
+}
+.mask1{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.8);
+}
+.sendBox,.zhiwBox{
+  width: 90%;
+  height: 400rpx;
+  background: #fff;
+  position: absolute;
+   top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+.sendBox .title,.zhiwBox .title{
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  display: block;
+  margin-top: 0;
+  padding: 0;
+}
+.maskMain{
+  width: 100%;
+  padding:  0 20rpx;
+  box-sizing: border-box;
+}
+.phone,.code{
+  width: 100%;
+  height: 90rpx;
+  background: #F5F5F7;
+  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+  position: relative;
+  overflow: hidden;
+}
+.phone input,.code input{
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 26rpx;
+  padding-left: 20rpx;
+}
+.btnGroup{
+  width: 100%;
+  height: 90rpx;
+  background: #F5F5F7;
+  position: absolute;
+  bottom: 0;
+}
+.btnGroup view{
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  background: #F5F5F7;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 28rpx;
+}
+.btnGroup .sure{
+  background: #E60048;
+  color: #fff;
+}
+.code .sure{
+  width: 35%;
+  height: 100%;
+  background: #E60048;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 28rpx;
+  z-index: 99
+}
+.code .sure.disabled{
+  background: #ccc;
+}
+.zhiwBox .phone{
+  margin-top: 50rpx;
+}
+.middle{
+  width: 100%;
+  height: 30rpx;
+  background: #f5f5f5;
+}
+.evaBox{
+  padding: 20rpx;
+}
+.workBox{
+  padding-left:60rpx;
+  font-size:30rpx;
+  position:relative;
+  padding-top:78rpx;
+  color:#9C9BA5;
+  overflow:hidden;
+  box-sizing:border-box;
+  padding-bottom:120rpx;
+}
+.number{
+  background: #E60048;
+  color: #fff;
+  font-size: 28rpx;
+}
+.number.nogo{
+  background: #ccc;
+}
+.evaTab{
+  width: 100%;
+  height: 150rpx;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items:center;
+  font-size: 26rpx;
+  color: #666;
+  border-bottom:1rpx solid #f5f5f5;
+}
+.evaScoreLi{
+ display: flex;
+  justify-content: center;
+}
+.evaScoreLi>view{
+  width: 30rpx;
+  height: 30rpx;
+ 
+}
+.evaScoreLi>view image{
+  width: 100%;
+  height: 100%;
+}
+.evaTop{
+  font-size:36rpx;
+color:#000;
+text-align: center;
+}
+.tab1{
+  width: 50%;
+  position: relative;
+}
+.tab1:last-child::after{
+  width: 0;
+}
+.tab1::after{
+  content: "";
+  display: block;
+  height: 100%;
+  width: 1rpx;
+  background: #f5f5f5;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.fiveBox{
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.fiveBox>view{
+  display: inline-block;
+  margin-right: 20rpx;
+  padding: 10rpx 15rpx;
+  background: #F2ECEA;
+  border-radius:10rpx;
+  margin:10rpx;
+  font-size: 24rpx;
+}

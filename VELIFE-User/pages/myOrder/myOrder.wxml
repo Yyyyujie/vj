@@ -1,0 +1,115 @@
+<view class="main">
+  <view class="tabBox">
+    <view wx:for="{{tab}}" wx:key="key" class='{{item.index==activeIndex?"active":""}}' data-id="{{item.index}}" bindtap='toggle'>{{item.name}}
+      <view class="tabBottom" data-id="{{item.index}}">
+        <image src='../../images/order.png' wx:if="{{item.index==activeIndex}}"></image>
+      </view>
+    </view>
+
+  </view>
+  <!-- 待消费 -->
+
+  <!-- <scroll-view scroll-y style="height: {{scrollHeight}}px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}"> -->
+
+<view class='tabCon' wx:for="{{2}}" wx:key="key" wx:if="{{activeIndex==item}}">
+    <view class='nothing' wx:if="{{list.length==0}}">暂无数据</view>
+    <view class='Con' wx:for="{{list}}">
+     
+      <view class='store'>{{item.shopVelife .shopName}}
+      </view>
+      <view>NO:
+        <text class='num'>{{item.orderNo}}</text>
+      </view>
+      <view class='left'>服务项目:
+        <text style='margin-left:20rpx'>{{item.itemName}}</text>
+      </view>
+      <view class='left'>发型师:
+        <text style='margin-left:20rpx' class='point'>{{item.barber.name}}</text>
+      </view>
+      <view>服务时间:
+        <text style='margin-left:20rpx'>{{item.createDate}}</text>
+      </view>
+      <view wx:if="{{activeIndex!=2}}" style='width:100%;'>项目价格:
+        <text style='margin-left:20rpx'>¥</text>
+        <text>{{item.orderPrice}}</text>
+      </view>
+      <view wx:if="{{activeIndex==1}}">实际价格:
+        <text style='margin-left:20rpx' class='point'>¥</text>
+        <text class='point'>48.0</text>
+      </view>
+      <view class='flexBox'>
+        <view class='pullleft'>地址:</view>
+        <view style='margin-left:20rpx'>{{item.shopVelife.address}}</view>
+      </view>
+      <view>电话:
+        <text style='margin-left:20rpx'>{{item.shopVelife.phone}}</text>
+      </view>
+      <view class="left" wx:if="{{activeIndex==2}}">支付金额:
+        <text style='margin-left:20rpx' class='point'>¥</text>
+        <text class='point'>38.0</text>
+      </view>
+      <view class='cancel eva' data-index='{{index}}' data-order="{{item.id}}" data-money="{{item.orderPrice}}" wx:if="{{activeIndex==0&&item.payStatus==0}}" bindtap='pay'>去支付</view>
+      <view class='cancel eva' data-index='{{index}}' wx:if="{{activeIndex==1&&item.payStatus==1&&item.commentStatus!=1}}"  bindtap='eva'>立即评价</view>
+ <view class='cancel' data-index='{{index}}' wx:if="{{activeIndex==1&&item.payStatus==1&&item.commentStatus==1}}">已评价</view>
+    </view>
+    
+  </view>
+  <!-- </scroll-view> -->
+
+
+
+</view>
+<view class='mask' wx:if="{{mask}}">
+
+  <view class='cardBox'>
+    <view class='closeBtn'>
+      <icon type='cancel' class='close' color='rgba(255,255,255,0.7)' bindtap='hide'></icon>
+    </view>
+    <view class='title' style='position:relative;'>
+      <view class='iconBox'>
+        <image src='../../images/logo.png'></image>
+      </view>
+      <text>HAIR</text>
+      <text>STYLIST</text>
+      <text>优惠券使用</text>
+    </view>
+    <view class='cardLis'>
+      <view class='noQuan' wx:if="{{quanList.length==0}}">暂无优惠券...</view>
+      <view class='card' wx:for="{{quanList}}" data-id='{{item.id}}' data-index="{{index}}" data-type="{{item.couponRuleVelife.couponType}}" data-num="{{item.couponRuleVelife.denomination}}" bindtap='choose' >
+        <image src='../../images/pinkCard.png'  wx:if="{{select==index}}"></image>
+          <image src='../../images/blueCard.png'  wx:else></image>
+        <view class='cardContent'>
+          <view class='cardLeft'>
+            <view class='cardTitle'>
+              <image src='../../images/card.png'></image>
+              <text>店铺优惠券</text>
+            </view>
+            <view class='cardBottom'>
+              <view>{{item.
+couponRuleVelife.name}}</view>
+              <view>使用时间:
+                <text>{{item.startTime}}——{{item.endTime}}</text>
+              </view>
+            </view>
+          </view>
+          <view class='carRight'>
+          <view class='zhe' wx:if="{{item.couponRuleVelife.couponType==1}}">
+            <text>{{item.couponRuleVelife.denomination*10}}</text>
+            <text>折</text>
+          </view>
+          <view class='jian' wx:if="{{item.couponRuleVelife.couponType==2||item.couponRuleVelife.couponType==3}}">
+            <text>¥</text>
+            <text>{{item.couponRuleVelife.denomination}}</text>
+          </view>
+      </view>
+        </view>
+      </view>
+
+    </view>
+    <view class='payBox'>
+     
+     <view class='payTo' bindtap='paySure'>立即支付</view>
+     <view>总价:¥{{newMoney==0?0.01:newMoney}}</view>
+    </view>
+  </view>
+</view>

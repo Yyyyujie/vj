@@ -1,0 +1,19 @@
+<view class="storeLi" wx:for="{{list}}" >
+    <view class='liLeft' data-id="{{item.id}}" bindtap='store'>
+        <view class='name'>{{item.shopName}}</view>
+        <view class='adr'>{{item.address}}</view>
+    </view>
+    <view class='liRight'>
+      <view> 
+        <view class='address' data-phone="{{item.phone}}" bindtap='call'>
+          <image src='../../images/mobile.png'></image>
+        </view>
+      </view>
+      <view>
+        <view class='address' data-latitude="{{item.latitude}}" data-longitude="{{item.longitude}}" bindtap='map'>
+          <image src='../../images/adr.png'></image>
+        </view>
+      </view>
+    </view>
+</view>
+<view class='nothing' wx:if="{{list.length==0}}">暂无数据...</view>

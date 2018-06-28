@@ -1,0 +1,92 @@
+<scroll-view scroll-y="true" style="height: 100%;" class='scroll' bindscrolltoupper="upper" bindscrolltolower="lower" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}" enable-back-to-top="true">
+  <view class='title'>
+    <view class='iconBox'>
+      <image src='../../images/logo.png'></image>
+    </view>
+    <text>HAIR</text>
+    <text>STYLIST</text>
+    <text>最新好评</text>
+  </view>
+  <!-- <view class='smallTitle'>最新好评</view> -->
+  <view class='evaList'>
+    <view class='nothing' wx:if="{{newList.length==0}}">暂无评价记录</view>
+    <view class='evaLi' wx:for="{{newList}}">
+      <view class='evaLeft'>
+        <image src='{{item.memberPic?item.memberPic:"../../images/logo.png"}}'></image>
+      </view>
+      <view class='evaRight'>
+        <view class='first'>
+          <text class='name'>{{item.shortName}}</text>(
+          <text>{{item.shortPhone}}</text>)
+            <view class='evaScro'>
+          <view class='evaScroLi' wx:for="{{5}}" wx:for-index="starIndex" wx:for-item="starItem">
+            
+            <image src='../../images/scroeOn.png' wx:if="{{starIndex<item.starLevel}}"></image>
+            <image src='../../images/scroe.png' wx:else></image>
+          </view> 
+        </view>
+          </view>
+        <view class='con'>
+          {{item.conten}}
+        </view>
+        <view class='imgBox'>
+          <image class='conImg' wx:for="{{item.pics}}" wx:for-item="imgItem" wx:for-index="imgIndex" data-src="{{imgItem}}" data-index="{{index}}" bindtap="previewImage"  src='{{imgItem}}'></image>
+        </view>
+        <view class='bottom'>
+          <view>{{item.shopVelife.shopName}}
+          </view>
+          <text class='pullRight'>{{item.createDate}}</text>
+          <view style='width:100%;'>发型师:
+            <text>{{item.barber.name}}</text>
+          </view>
+        </view>
+        
+      </view>
+    </view>
+  </view>
+  <!-- <view class='smallTitle'>最热好评</view> -->
+  <view class='title'>
+    <view class='iconBox'>
+      <image src='../../images/logo.png'></image>
+    </view>
+    <text>HAIR</text>
+    <text>STYLIST</text>
+    <text>最热好评</text>
+  </view>
+  <view class='evaList'>
+    <view class='nothing' wx:if="{{evaList.length==0}}">暂无评价记录</view>
+    <view class='evaLi' wx:for="{{evaList}}">
+      <view class='evaLeft'>
+        <image src='{{item.memberPic?item.memberPic:"../../images/logo.png"}}'></image>
+      </view>
+      <view class='evaRight'>
+        <view class='first'>
+          <text class='name'>{{item.shortName}}</text>(
+          <text>{{item.shortPhone}}</text>)
+            <view class='evaScro'>
+          <view class='evaScroLi' wx:for="{{5}}" wx:for-index="starIndex" wx:for-item="starItem">
+            
+            <image src='../../images/scroeOn.png' wx:if="{{starIndex<item.starLevel}}"></image>
+            <image src='../../images/scroe.png' wx:else></image>
+          </view> 
+        </view>
+          </view>
+        <view class='con'>
+          {{item.conten}}
+        </view>
+        <view class='imgBox'>
+          <image class='conImg' wx:for="{{item.pics}}" wx:for-item="imgItem" wx:for-index="imgIndex" data-src="{{imgItem}}" data-index="{{index}}" bindtap="previewImage"  src='{{imgItem}}'></image>
+        </view>
+        <view class='bottom'>
+          <view>{{item.shopVelife.shopName}}
+          </view>
+          <text class='pullRight'>{{item.createDate}}</text>
+          <view style='width:100%;'>发型师:
+            <text>{{item.barber.name}}</text>
+          </view>
+        </view>
+        
+      </view>
+    </view>
+  </view>
+</scroll-view>

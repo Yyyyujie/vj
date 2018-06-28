@@ -1,0 +1,36 @@
+<view class='header'>
+  <view class='tx' bindtap='person'>
+    <image src='{{userInfo.headImage?userInfo.headImage:"../../images/logo.png"}}'></image>
+  </view>
+  <view class='wel'>HI,{{userInfo.nickName?userInfo.nickName:"欢迎"}}</view>
+  <button class='getInfo'  open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" wx:if="{{!userInfo.nickName}}">登录</button>
+  <view class='call' bindtap='call'>
+    <image src='../../images/call.png'></image>
+    <view>投诉建议</view>
+  </view>
+</view>
+<view class='tabBox'>
+    <view class='checkOrder' bindtap='quan'>
+      <image src='../../images/me_quan.png'></image>
+      <text>我的优惠券</text>
+    </view>
+    <view class='work' bindtap='faxing'>
+       <image src='../../images/me_Faxing.png'></image>
+      <text>参考发型</text>
+    </view>
+    <view class='project' bindtap='order'>
+       <image src='../../images/me_order.png'></image>
+      <text>我的订单</text>
+    </view>
+    <view class='eva' bindtap='eva'>
+       <image src='../../images/me_eva.png'></image>
+      <text>评价记录</text>
+    </view>
+</view>
+<view class='adBox' bindtap='ad'>
+  <view class='adTitle'>商机直谈"<text>创业助力计划</text>"</view>
+  <view class='adZi'>为您创业保驾护航</view>
+  <view class='adImg'>
+    <image src='../../images/ad.png'></image>
+  </view>
+</view>

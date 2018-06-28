@@ -1,0 +1,49 @@
+<!--pages/invitation.wxml-->
+<view class='banner'>
+  <image src='../../images/banner.jpg'></image>
+  <view class='bannerZi'>
+    <image src='../../images/bannerZi.png'></image>
+  </view>
+  <view class='bot'>
+    <image src='../../images/bot.png'></image>
+  </view>
+</view>
+<view class='con'>
+  <view>邀请好友(限新用户),送好友<text class='red'>{{invitation.couponRuleVelife.denomination}}元红包</text></view>
+  <view>好友领券后首次剪发完成支付,您也将获得<text class='red'>{{invitation.couponRuleVelife.denomination}}元红包!</text></view>
+  <view class='card'>
+      <view class='cardLeft'>
+          <view>剪发券</view>
+          <view>邀请新用户剪发完成后可得</view>
+      </view>
+      <view class='cardRight'>
+        <view>{{invitation.couponRuleVelife.denomination}}<view>¥</view></view>
+      </view>
+  </view>
+  <view class='cardB'>微信粉丝价38-58元，领券后再减</view>
+  <view class='liBox'>
+      <view class='Li'>
+          <view class='liLeft'>了解微剪生活</view>
+          <view class='liRight'>开启品质剪发之旅></view>
+      </view>
+      <view class='Li' bindtap='shopEva'>
+          <view class='liLeft'>门店评价</view>
+          <view class='liRight'>></view>
+      </view>
+      <view class='Li' bindtap='gotoStores'>
+          <view class='liLeft'>适用门店</view>
+          <view class='liRight'>最近门店距您></view>
+      </view>
+      <view class='Li'>
+          <view class='liLeft'>公众号</view>
+          <view class='liRight'>></view>
+      </view>
+      <view class='Li'>
+          <view class='liLeft'>优惠券详细</view>
+          <view class='liRight'>></view>
+      </view>
+  </view>
+</view>
+<view class='shareBox'>
+  <button open-type="share">有福要同享</button>
+</view>
